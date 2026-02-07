@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Fuzzy+Bubbles:wght@400;700&family=Mansalva&family=Mynerve&family=Over+the+Rainbow&family=Playpen+Sans:wght@100..800&family=Schoolbell&display=swap');
+
+.fuzzy-bubbles-regular {
+    font-family: "Fuzzy Bubbles", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fuzzy-bubbles-bold {
+    font-family: "Fuzzy Bubbles", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.schoolbell-regular {
+    font-family: "Schoolbell", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* momken ya5od rakam mn 100 l 800 */
+.playpen-sans-regular {
+    font-family: "Playpen Sans", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.playpen-sans-bold {
+    font-family: "Playpen Sans", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.mansalva-regular {
+    font-family: "Mansalva", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* html,
+body {
+    min-height: 100vh;
+} */
+
+html {
+    /* 1 rem = 100% of 16 = 16px */
+    font-size: 100%;
+}
+
+body {
+    background-image: url('./assets/notebook-bg.jpg');
+    background-size: contain;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+
+
+
+.main {
+    width: 90vw;
+    margin: auto;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 4.5rem;
+    text-align: center;
+    /* margin: 0.7rem 0rem; */
+    /* margin-bottom: 2rem;
+    margin-top: 1rem; */
+
+}
+
+.title {
+    height: 20vh;
+
+}
+
+.game-main {
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+
+}
+
+.game-main>div {
+    /* border: 1px solid red; */
+    /* flex: 1; */
+    /* width: 50%; */
+    text-align: center;
+
+}
+
+/* #game-right {
+    text-align: center;
+} */
+
+.game-right {
+    flex: 1;
+    max-height: 80vh;
+    /* margin: auto; */
+    /* min-height: 100%; */
+
+}
+
+.game-left {
+    flex: 1;
+    max-height: 80vh;
+    /* margin: auto; */
+    /* padding-top: 10px; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around; */
+
+}
+
+.game-right img {
+    /* min-height: 100%; */
+    /* he */
+    height: 65vh;
+    /* border: 1px solid green; */
+}
+
+#answer {
+    font-size: 18px;
+    margin-bottom: 1.6rem;
+}
+
+#answer span {
+    display: inline-block;
+    font-size: 2rem;
+    min-width: 2.2rem;
+    /* min-height: 4rem; */
+    /* height: 300px; */
+    /* padding: 4px 6px; */
+    /* border-bottom: 0.5rem solid black; */
+}
+
+.category {
+    font-size: 1.6rem;
+    padding: 4px 0px;
+    margin-bottom: 1rem;
+}
+
+.letters {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.letters span {
+    font-size: 1.6rem;
+    padding: 4px 10px;
+    margin: 4px 8px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 769px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+
+    html {
+        /* 1 rem = 100% of 16 = 16px */
+        font-size: 87.5%;
+    }
+
+    .title {
+        height: 10vh;
+        margin-bottom: 2rem;
+
+    }
+
+    .game-main {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .game-left,
+    .game-right {
+        max-height: 100%;
+    }
+
+    .game-right {
+        max-height: 35vh;
+    }
+
+    .game-right img {
+        height: 100%;
+        max-width: 80%;
+        /* border: 1px solid green; */
+    }
+
+    .letters {
+        width: 100%;
+    }
+}
