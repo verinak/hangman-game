@@ -1,22 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Fuzzy+Bubbles:wght@400;700&family=Mansalva&family=Mynerve&family=Over+the+Rainbow&family=Playpen+Sans:wght@100..800&family=Schoolbell&display=swap');
-
-.fuzzy-bubbles-regular {
-    font-family: "Fuzzy Bubbles", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.fuzzy-bubbles-bold {
-    font-family: "Fuzzy Bubbles", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.schoolbell-regular {
-    font-family: "Schoolbell", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Mansalva&family=Playpen+Sans:wght@100..800&display=swap');
 
 /* momken ya5od rakam mn 100 l 800 */
 .playpen-sans-regular {
@@ -48,25 +30,12 @@
     padding: 0;
 }
 
-/* html,
-body {
-    min-height: 100vh;
-} */
-
-html {
-    /* 1 rem = 100% of 16 = 16px */
-    font-size: 100%;
-}
-
 body {
     background-image: url('./assets/notebook-bg.jpg');
     background-size: contain;
     background-repeat: repeat;
     background-attachment: fixed;
 }
-
-
-
 
 .main {
     width: 90vw;
@@ -77,9 +46,6 @@ body {
 h1 {
     font-size: 4.5rem;
     text-align: center;
-    /* margin: 0.7rem 0rem; */
-    /* margin-bottom: 2rem;
-    margin-top: 1rem; */
 
 }
 
@@ -96,41 +62,24 @@ h1 {
 }
 
 .game-main>div {
-    /* border: 1px solid red; */
     /* flex: 1; */
     /* width: 50%; */
     text-align: center;
 
 }
 
-/* #game-right {
-    text-align: center;
-} */
 
-.game-right {
-    flex: 1;
-    max-height: 80vh;
-    /* margin: auto; */
-    /* min-height: 100%; */
-
-}
-
+.game-right,
 .game-left {
     flex: 1;
     max-height: 80vh;
-    /* margin: auto; */
-    /* padding-top: 10px; */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-around; */
 
 }
 
+
 .game-right img {
     /* min-height: 100%; */
-    /* he */
     height: 65vh;
-    /* border: 1px solid green; */
 }
 
 #answer {
@@ -143,9 +92,6 @@ h1 {
     font-size: 2rem;
     min-width: 2.2rem;
     /* min-height: 4rem; */
-    /* height: 300px; */
-    /* padding: 4px 6px; */
-    /* border-bottom: 0.5rem solid black; */
 }
 
 .category {
@@ -185,15 +131,6 @@ h1 {
 #roundOver {
     font-size: 2rem;
     text-align: center;
-    /* position: fixed;
-    top: 20vh;
-    left: 10vw;
-    width: 80vw;
-    height: 60vh;
-    z-index: 20; */
-    /* background-color: #f4f4f4; */
-    /* border: 4px solid black; */
-    /* border-radius: 20px; */
     /* display: flex; */
     flex-direction: column;
     justify-content: center;
@@ -205,8 +142,6 @@ h1 {
     background-color: transparent;
     border: 3px solid black;
     border-radius: 10px;
-    /* border: none; */
-    /* color: white; */
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -217,20 +152,17 @@ h1 {
     width: fit-content;
 }
 
-@media only screen and (min-width: 769px) {}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Small devices (768px or smaller)*/
 @media only screen and (max-width: 768px) {
 
     html {
-        /* 1 rem = 100% of 16 = 16px */
+        /* 1 rem = 14px */
         font-size: 87.5%;
     }
 
     .title {
         height: 10vh;
         margin-bottom: 2rem;
-
     }
 
     .game-main {
@@ -250,7 +182,6 @@ h1 {
     .game-right img {
         height: 100%;
         max-width: 80%;
-        /* border: 1px solid green; */
     }
 
     .letters {
