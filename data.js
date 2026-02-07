@@ -354,7 +354,7 @@ var DATA = {
 
     "occupations": {
         "description": "Occupations",
-        "occupations": [
+        "data": [
             "accountant",
             "actor",
             "administrative assistant",
