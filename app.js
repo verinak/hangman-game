@@ -11,6 +11,35 @@ var answerDiv = document.querySelector('div#answer');
 var categoryDiv = document.querySelector('div.category');
 var hangmanImg = document.querySelector('.game-right img');
 
+var roundPlayDiv = document.getElementById('roundPlay');
+var roundOverDiv = document.getElementById('roundOver');
+
+var playAgainBtn = document.querySelector('#roundOver button');
+
+playAgainBtn.addEventListener('click', function (event) {
+
+    // reset variables
+    mistakes = 0;
+    lettersFound = 0;
+
+    // reset hangman img
+    hangmanImg.src = './assets/hangman0.png';
+
+    // w n generate kelma gdida isa
+
+    createAnswerPlaceholder();
+    // hide round over div 
+    roundOverDiv.style.display = 'none';
+    roundPlayDiv.style.display = 'block';
+
+    // enable all letters again
+    lettersDiv.querySelectorAll('span').forEach(function (span) {
+        span.classList.remove('disabled');
+        span.addEventListener('click', onLetterClicked);
+    })
+
+});
+
 document.addEventListener('DOMContentLoaded', function () {
 
     // add letter buttons
@@ -27,6 +56,13 @@ document.addEventListener('DOMContentLoaded', function () {
     answerWord = 'Hello World' // will be generated isa bs a5alas da el awel
     category = 'Example'
 
+    createAnswerPlaceholder();
+})
+
+function createAnswerPlaceholder() {
+    // clear old spans
+    answerDiv.textContent = '';
+
     for (var i = 0; i < answerWord.length; i++) {
         var span = document.createElement('span');
         // empty span for whitespace
@@ -41,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     categoryDiv.textContent = 'Hint: ' + category;
-})
+}
 
 
 function onLetterClicked(event) {
@@ -74,7 +110,7 @@ function onLetterClicked(event) {
         console.log('lost!');
         hangmanImg.src = './assets/hangman-lose.png';
 
-        endRound(true);
+        endRound(false);
     }
 
     if (lettersFound === answerWord.length) {
@@ -82,17 +118,22 @@ function onLetterClicked(event) {
         console.log('won!');
         hangmanImg.src = './assets/hangman-win.png';
 
-        endRound(false)
+        endRound(true)
     }
 
 }
 
 function endRound(win) {
 
-    // disable all buttons
-    lettersDiv.querySelectorAll('span').forEach(function (span) {
-        span.classList.add('disabled');
-        span.removeEventListener('click', onLetterClicked);
-    })
+    // // disable all buttons
+    // lettersDiv.querySelectorAll('span').forEach(function (span) {
+    //     span.classList.add('disabled');
+    //     span.removeEventListener('click', onLetterClicked);
+    // })
+
+
+    roundPlayDiv.style.display = 'none';
+    roundOverDiv.style.display = 'flex';
+    roundOverDiv.querySelector('p').textContent = (win) ? 'You won!' : 'You lost!';
 
 }
